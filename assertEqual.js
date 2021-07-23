@@ -3,10 +3,10 @@ const assertEqual = function(actual, expected) {
   let act = actual;
   let exp = expected;
   if (typeof actual === "string") {
-    act = `"` + actual + `"`;
+    act = `"${actual}"`;
   }
   if (typeof expected === "string") {
-    exp = `"` + expected + `"`;
+    exp = `"${expected}"`;
   }
   let emojip = String.fromCodePoint(0x1F49A);
   let emojif = String.fromCodePoint(0x1F975);
