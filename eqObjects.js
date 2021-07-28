@@ -54,11 +54,13 @@ const eqObjects = function(object1, object2) {
             } 
           }
         } else {
-            return eqObjects(var1, var2);
+            if (!eqObjects(var1, var2)){
+              return false;
+            };
+          }
         }
       }
     }
-  }
   return true;
 };
 
