@@ -44,10 +44,8 @@ const eqObjects = function(object1, object2) {
 };
 const assertObjectsEqual = function (act, exp) {
   const inspect = require('util').inspect; // <= add this line
-  let emojip = String.fromCodePoint(0x1F49A);//http://unicode.org/emoji/charts/full-emoji-list.html#1f600
-  let emojif = String.fromCodePoint(0x1F975);
-  let pass1 = `${emojip}${emojip}Assertion Passed: ${inspect(act)} === ${inspect(exp)}`;
-  let fail1 = `${emojif}${emojif}${emojif}Assertion Failed: ${inspect(act)} !== ${inspect(exp)}`;
+  let pass1 = `💚💚💚 Assertion Passed: ${inspect(act)} === ${inspect(exp)}`;
+  let fail1 = `🥵🥵🥵 Assertion Failed: ${inspect(act)} !== ${inspect(exp)}`;
   if (eqObjects(act, exp)) {
     console.log(pass1);
   } else {

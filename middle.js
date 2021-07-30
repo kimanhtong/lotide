@@ -1,4 +1,5 @@
-const eqArrays = function (arr1, arr2) {
+// FUNCTION IMPLEMENTATION
+const eqArrays = function(arr1, arr2) {
   if (arr1.length === arr2.length) {
     for (let i = 0; i < arr1.length; i++) {
       if (arr1[i] !== arr2[i]) {
@@ -10,13 +11,9 @@ const eqArrays = function (arr1, arr2) {
     return false;
   }
 };
-const assertArraysEqual = function (arractual, arrexpected) {
-  const act = [].concat(arractual);
-  const exp = [].concat(arrexpected);
-  const emojip = String.fromCodePoint(0x1F49A);// http://unicode.org/emoji/charts/full-emoji-list.html#1f600
-  const emojif = String.fromCodePoint(0x1F975);
-  const pass1 = `${emojip}${emojip}Assertion Passed: ${act} === ${exp}`;
-  const fail1 = `${emojif}${emojif}${emojif}Assertion Failed: ${act} !== ${exp}`;
+const assertArraysEqual = function(act, exp) {
+  let pass1 = `💚💚💚 Assertion Passed: ${act} === ${exp}`;
+  let fail1 = `🥵🥵🥵 Assertion Failed: ${act} !== ${exp}`;
   if (eqArrays(act, exp)) {
     console.log(pass1);
   } else {

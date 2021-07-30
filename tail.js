@@ -1,16 +1,7 @@
-const assertEqual = function(actual, expected) {
-  let act = actual;
-  let exp = expected;
-  if (typeof actual === "string") {
-    act = `"${actual}"`;
-  }
-  if (typeof expected === "string") {
-    exp = `"${expected}"`;
-  }
-  let emojip = String.fromCodePoint(0x1F49A);
-  let emojif = String.fromCodePoint(0x1F975);
-  let pass1 = `${emojip}${emojip}Assertion Passed: ${act} === ${exp}`;
-  let fail1 = `${emojif}${emojif}${emojif}Assertion Failed: ${act} !== ${exp}`;
+// FUNCTION IMPLEMENTATION
+const assertEqual = function(act, exp) {
+  let pass1 = `💚💚💚 Assertion Passed: ${act} === ${exp}`;
+  let fail1 = `🥵🥵🥵 Assertion Failed: ${act} !== ${exp}`;
   if (act === exp) {
     console.log(pass1);
   } else {
@@ -30,7 +21,7 @@ assertEqual(words.length, 3); // original array should still have 3 elements!
 assertEqual(JSON.stringify(tail([3])), JSON.stringify([]));
 assertEqual(JSON.stringify(tail([])), JSON.stringify([]));
 assertEqual(JSON.stringify(tail([3, 4, 5])), JSON.stringify([4, 5]));
-assertEqual(JSON.stringify(tail(undefined)), JSON.stringify(null));
+assertEqual(JSON.stringify(tail(undefined)), '[]');
 const result1 = tail(["Hello", "Lighthouse", "Labs"]);
 assertEqual(JSON.stringify(result1), JSON.stringify(["Lighthouse", "Labs"]));
 // Test Case 1: Check the returned array elements
