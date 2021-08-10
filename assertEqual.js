@@ -9,9 +9,6 @@ const assertEqual = function(act, exp) {
   }
 };
 
-// TEST CODE
+// Export the function
 
-assertEqual(1, 1);
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(7, "7");
-assertEqual("Javascript", "Javascript");
+module.exports = assertEqual;
