@@ -1,19 +1,39 @@
-const assertEqual = require (`../assertEqual`);
+const assert = require('chai').assert;
 const tail = require (`../tail`);
-//Test Case: Check the original array
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); // no need to capture the return value since we are not checking it
-assertEqual(words.length, 3); // original array should still have 3 elements!
-assertEqual(JSON.stringify(tail([3])), JSON.stringify([]));
-assertEqual(JSON.stringify(tail([])), JSON.stringify([]));
-assertEqual(JSON.stringify(tail([3, 4, 5])), JSON.stringify([4, 5]));
-assertEqual(JSON.stringify(tail(undefined)), '[]');
-const result1 = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(JSON.stringify(result1), JSON.stringify(["Lighthouse", "Labs"]));
-// Test Case 1: Check the returned array elements
-const result2 = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result2.length, 2); // ensure we get back two elements
-assertEqual(result2[0], "Lighthouse"); // ensure first element is "Lighthouse"
-assertEqual(result2[1], "Labs"); // ensure second element is "Labs"
-// Test Case 2: Check the returned array if the initial array has 1 element only
-//const result
+
+describe ("#tail", function () {
+  it ("should return array words except the first one", function () {
+    const arr = ["Yo Yo", "Lighthouse", "Labs"];
+    assert.deepEqual(tail(arr), ["Lighthouse", "Labs"]);
+  });
+
+  it ("should return array with length less than the original by 1", function () {
+    const arr = ["Yo Yo", "Lighthouse", "Labs"];
+    assert.lengthOf(tail(arr), 2);
+  });
+
+  it ("should return empty if array only has 1 number", function () {
+    const arr = [3];
+    assert.deepEqual(tail(arr), []);
+  });
+
+  it ("should return an empty array for an empty array", function () {
+    const arr = [];
+    assert.deepEqual(tail(arr), []);
+  });
+
+  it ("should return an array of numbers excep the first number", function () {
+    const arr = [3, 7, 3, 8, 9, 12, 34, 45, 45435345, 89789678678];
+    assert.deepEqual(tail(arr), [7, 3, 8, 9, 12, 34, 45, 45435345, 89789678678]);
+  })
+
+  it ("should return an empty array for undefined", function () {
+    assert.deepEqual(tail(undefined), []);
+  })
+
+  it ("should return empty if array only has 1 word", function () {
+    const arr = ['found'];
+    assert.deepEqual(tail(arr), []);
+  })
+
+});
