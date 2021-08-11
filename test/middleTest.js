@@ -1,6 +1,6 @@
 //const assertArraysEqual = require (`../assertArrayEqual`);
 const assert = require ('chai').assert;
-const middle = require (`../middle`);
+const middle = require (`../index`).middle;
 
 // Test the function middle.js
 /*assertArraysEqual(middle([1]), []);
