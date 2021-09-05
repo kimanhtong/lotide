@@ -1,6 +1,7 @@
 # Lotide Project
 
 The Lotide project is a modular collection of functions that operate on data, namely Arrays and Objects.
+The project was published on npmjs.com
 
 ## Final Product
 
