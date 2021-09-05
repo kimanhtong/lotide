@@ -1,0 +1,16 @@
+const countLetters = require ('../countLetters');
+const assertEqual = require ('../assertEqual');
+let result1 = countLetters("LIGHTHOUSElab");
+console.log("\n #countLetters: count each letter (case-sensitive) in the word LIGHTHOUSElab");
+assertEqual(result1["L"], 1);
+assertEqual(result1["I"], 1);
+assertEqual(result1["G"], 1);
+assertEqual(result1["H"], 2);
+assertEqual(result1["T"], 1);
+assertEqual(result1["O"], 1);
+assertEqual(result1["U"], 1);
+assertEqual(result1["S"], 1);
+assertEqual(result1["E"], 1);
+assertEqual(result1["l"], 1);
+assertEqual(result1["a"], 1);
+assertEqual(result1["b"], 1);
