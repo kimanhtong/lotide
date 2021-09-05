@@ -1,10 +1,10 @@
 # Lotide Project
 
 The Lotide project is a modular collection of functions that operate on data, namely Arrays and Objects.
-The project was published on npmjs.com
+The project was published on `npmjs.com`.
 
 ## Final Product
-The project provides 18 functions with main purposes as following:
+The project provides 17 functions with main purposes as following:
 1. assertObjectsEqual: a function that takes in 2 objects and returns true if they are equal and false otherwise.
 2. assertArraysEqual: a function that takes in 2 arrays and returns true if they are equal and false otherwise.
 3. assertEqual: a function that takes in 2 values and returns true if they are equal and false otherwise.
