@@ -2,15 +2,15 @@ const assert = require('chai').assert;
 const _ = require ('../index');
 
 describe ("#eqArrays", () => {
-  it ("return true for 2 arrays with different orders of same items", () => {
+  it ("return false for 2 arrays with different orders of same items", () => {
     const ab = ["1", "2"];
     const ba = ["2", '1'];
-    assert.deepEqual(_.eqArrays(ab, ba),true);
+    assert.deepEqual(_.eqArrays(ab, ba), false);
   })
 
-  it ("return true for 2 same arrays of numbers", () => {
+  it ("return true for 2 arrays with the same orders of the same numbers", () => {
     const ab = [343, 5, 6, 7, 7];
-    const ba = [343, 7, 5, 6, 7];
+    const ba = [343, 5, 6, 7, 7];
     assert.deepEqual(_.eqArrays(ab, ba),true);
   })
 
