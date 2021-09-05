@@ -18,5 +18,13 @@ module.exports = {
   letterPositions,
   findKeyByValue,
   eqObjects,
-  eqArrays
+  eqArrays,
+  assertArraysEqual,
+  assertEqual,
+  assertObjectsEqual,
+  countLetters,
+  findKey,
+  map,
+  takeUntil,
+  without
 };
