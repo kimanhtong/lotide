@@ -1,4 +1,4 @@
-const assertEqual = require(`../index`).assertEqual;
+const assertEqual = require(`../assertEqual`);
 // TEST CODE
 
 assertEqual(1, 1);
