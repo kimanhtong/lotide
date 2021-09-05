@@ -1,9 +1,8 @@
-const findKey = require ('../findKey');
-const assertEqual = require ('../assertEqual');
+const _ = require ('../index');
 
 // TEST THE SOLUTION 
 console.log ('\n #findKey');
-assertEqual(findKey({
+_.assertEqual(_.findKey({
   "Blue Hill": { stars: 1 },
   "Akaleri":   { stars: 3 },
   "noma":      { stars: 2 },
@@ -12,7 +11,7 @@ assertEqual(findKey({
   "Akelarre":  { stars: 3 }
 }, x => x.stars === 2), "noma");
 
-assertEqual(findKey({
+_.assertEqual(_.findKey({
   "Blue Hill": { stars: 1 },
   "Akaleri":   { stars: 3 },
   "noma":      { stars: 2 },
@@ -21,7 +20,7 @@ assertEqual(findKey({
   "Akelarre":  { stars: 3 }
 }, x => x.stars >= 2 && x.stars <= 4), "Akaleri");
 
-assertEqual(findKey({
+_.assertEqual(_.findKey({
   "Blue Hill": { stars: 1 },
   "Akaleri":   { stars: 3 },
   "noma":      { stars: 2 },
